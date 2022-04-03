@@ -107,6 +107,6 @@ def edit(request, id):
             # instance.user = Profile.objects.get(user=request.user)
             instance.save()
             return redirect(f'profile/{userid}/')
-    return render(request, 'app/testing.html', {"form":form})
+    return render(request, 'app/edit.html', {"form":form})
 
 
