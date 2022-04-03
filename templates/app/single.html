@@ -8,7 +8,10 @@
         </div>
         <div class="post-user">
             <div class="post-user-name">
-                <img src="{% static 'images/default.jpg'%}" alt="">
+                {% if user.id == userid %} {% if not user.profile.profilePhoto.url %}
+                <img src="{% static 'images/default.jpg'%}" alt="profile"> {% else %}
+                <img src="{{user.profile.profilePhoto.url}}" alt="profile"> {% endif %} {% else %}
+                <img src="{% static 'images/default.jpg'%}" alt="profile"> {% endif %}
                 <h3>{{ post.user.username }}</h3>
             </div>
             <div class="post-likes">
