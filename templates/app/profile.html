@@ -14,7 +14,7 @@
                 </div>
                 {% if profile.user.id == userid %}
                 <div class="profile-info-name-edit">
-                    <button><a href="{% url 'testing' profile.id %}">Edit Profile</a></button>
+                    <button><a href="{% url 'edit' profile.id %}">Edit Profile</a></button>
                     <button><a href="{% url 'logout' %}">Logout</a></button>
                 </div>
                 {% endif %}
